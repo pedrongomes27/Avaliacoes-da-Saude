@@ -1,0 +1,356 @@
+/* Importa a variação 300 da fonte Heebo */
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap');
+/* Importa a variação 500 da fonte Heebo */
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@500&display=swap');
+/* Importa a variação 700 da fonte Heebo */
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@700&display=swap');
+
+
+* {
+    font-family: 'Heebo';
+}
+
+body {
+    background-image: url('./../img/background.png');
+    background-size: cover;
+    padding-bottom: 69px;
+    padding-top: 69px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1280px;
+
+}
+
+.form-title {
+    margin-top: 50px;
+    margin-bottom: 44px;
+
+    font-family: 'Heebo';
+    font-weight: 700;
+    font-size: 43px;
+    line-height: 63px;
+    text-align: center;
+    color: #285D34;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+.container {
+
+    padding-left: 107px;
+    padding-right: 107px;
+
+
+    background: #D9D9D9;
+    box-shadow: 3px 7px 10px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+
+    min-width: 755px;
+
+}
+
+.form-question {
+    font-family: 'Heebo';
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 41px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 14px;
+
+    color: #285D34;
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-radio {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 35.77px;
+}
+
+.form-comment,
+.form-search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+
+}
+
+.find {
+    width: 28px;
+}
+
+.error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* .has-error */
+
+.form-result {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: fit-content;
+}
+
+
+.unidade {
+    color: #285D34;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f1f1f1;
+    color: #333;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 16px;
+    margin: 5px;
+}
+
+
+.comment,
+.input-search {
+    width: 643px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #ededed;
+    box-shadow: 1px 4px 5px 5px rgba(0, 0, 0, 0.25);
+    font-size: 16px;
+    color: #333;
+    padding: 8px 12px;
+
+
+}
+
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    /* background-image: url("./../img/star.png"); */
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 105px;
+    height: 94.23px;
+    vertical-align: middle;
+    margin-bottom: 6.77px;
+    cursor: pointer;
+
+}
+
+.option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+    margin-bottom: 24px;
+}
+
+.option label {
+    color: #1B4024;
+    font-weight: 500;
+    margin-top: 6.77px;
+    cursor: pointer;
+
+}
+
+#opcao1 {
+    background-image: url("./../img/pessimo-blanked.png");
+}
+
+#opcao1:checked {
+    background-image: url("./../img/pessimo-selected.png");
+    width: 110px;
+    height: 94.23px;
+
+}
+
+/* #opcao1:checked+.opcao1 {
+    color: #FF1E26;
+} */
+
+#opcao2 {
+    background-image: url("./../img/ruim-blanked.png");
+}
+
+#opcao2:checked {
+    background-image: url("./../img/ruim-selected.png");
+    width: 110px;
+    height: 94.23px;
+}
+
+/* #opcao2:checked+.opcao2 {
+    color: #ff7700;
+} */
+
+#opcao3 {
+    background-image: url("./../img/favoravel-blanked.png");
+}
+
+#opcao3:checked {
+    background-image: url("./../img/favoravel-selected.png");
+    width: 110px;
+    height: 94.23px;
+}
+
+/* #opcao3:checked+.opcao3 {
+    color: #fff700;
+} */
+
+#opcao4 {
+    background-image: url("./../img/bom-blanked.png");
+}
+
+#opcao4:checked {
+    background-image: url("./../img/bom-selected.png");
+    width: 110px;
+    height: 94.23px;
+}
+
+/* #opcao4:checked+.opcao4 {
+    color: #7FE611;
+} */
+
+#opcao5 {
+    background-image: url("./../img/excelente-blanked.png");
+}
+
+#opcao5:checked {
+    background-image: url("./../img/excelente-selected.png");
+    width: 110px;
+    height: 94.23px;
+}
+
+/* #opcao5:checked+.opcao5 {
+    color: #01D300;
+    
+} */
+
+.submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 44px;
+}
+
+.submit-search {
+    margin-left: 12px;
+    border: none;
+    background-color: #FEBA2C;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 20px;
+    padding: 1px 10px;
+    padding-top: 7px;
+    cursor: pointer;
+    
+}
+
+.submit-form{
+    border: none;
+    background-color: #285D34;
+    color: #fff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 20px;
+    padding: 10px 80px;
+    cursor: pointer;
+}
+
+.icons {
+    margin-top: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-secretaria img {
+    width: 70.85px;
+}
+
+.icon-prefeitura img {
+    width: 245.31px;
+
+}
+
+.icon-sus img {
+    width: 71.99px;
+}
+
+
+.page {
+    display: none;
+
+}
+
+.active {
+    display: block;
+}
+
+.pagination {
+    display: grid;
+    margin-top: 15px;
+}
+
+button.prev,
+button.next {
+    border: none;
+    background: #FEBA2C;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: #1B4024;
+    padding: 15px 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 20px;
+    margin-left: 60px;
+    margin-right: 55px;
+}
+
+button.next {
+    float: right;
+}
+
+button.prev {
+    float: left;
+}
+
+.has-error {
+    float: left;
+    color: red;
+
+}
+
+.not-error {
+    display: none;
+}
+
+.information {
+    position: absolute;
+    top: 9px;
+    right: 9px;
+    color: #fff;
+    font-size: 15px;
+    padding: 7px 10px;
+    background-color: #FEBA2C;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+
+}
