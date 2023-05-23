@@ -25,7 +25,7 @@ class FeedbackController extends Controller
 
         // $unidades = $unidade::where("no_unidade", "LIKE", "%UPA%")->get();
 
-        return view('admin/feedback/index', compact('unidades'));
+        return view('Admin/Feedback/index', compact('unidades'));
     }
 
     /**
@@ -34,7 +34,7 @@ class FeedbackController extends Controller
     public function create(string $unidades)
     {
         $unidade = CompanyEstablishments::where('id', 'LIKE', '%' . $unidades . '%')->pluck('no_unidade')->first();
-        return view('admin/feedback/create', compact('unidade'));
+        return view('Admin/Feedback/create', compact('unidade'));
     }
 
     /**
