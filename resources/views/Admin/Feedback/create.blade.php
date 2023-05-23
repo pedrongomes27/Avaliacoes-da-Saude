@@ -153,7 +153,7 @@
                     </div>
 
                     <div class="submit">
-                        <button type="submit" class="submit-form">ENVIAR</button>
+                        <button id="submitButton" type="submit" onclick="disableButton()" class="submit-form">ENVIAR</button>
                     </div>
                 </div>
 
@@ -229,4 +229,10 @@
             prevPage.classList.add('active');
         });
     });
+
+    function disableButton() {
+        var button = document.getElementById("submitButton");
+        button.style.display = "none";
+
+    }
 </script>
