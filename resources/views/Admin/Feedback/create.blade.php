@@ -233,6 +233,6 @@
     function disableButton() {
         var button = document.getElementById("submitButton");
         button.style.display = "none";
-
     }
+    
 </script>
