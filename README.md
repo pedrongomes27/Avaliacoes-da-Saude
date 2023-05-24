@@ -1,12 +1,5 @@
-<a style="justify-content: center" href="https://github.com/pedrongomes27/Avaliacoes-da-Saude">
-  <img src="https://github.com/pedrongomes27/Avaliacoes-da-Saude/blob/main/public/assets/img/readme-pref.png" />
-</a>
-
-# Avaliacoes-da-Saude
-Sistema de Avaliacoes utilizado para a saúde desenvolvido na Secretaria Municipal de Saúde de Caruaru - 
-
 <p align="center">
- <img width="100px" src="https://github.com/pedrongomes27/Avaliacoes-da-Saude/blob/main/public/assets/img/readme-pref.png" align="center" alt="Sistema de Avaliações" />
+ <img width="200px" src="https://github.com/pedrongomes27/Avaliacoes-da-Saude/blob/main/public/assets/img/readme-pref.png" align="center" alt="Sistema de Avaliações" />
  <h2 align="center">Sistema de Pesquisa de Satisfação e Avaliação das Unidades de Saúde de Caruaru - PE</h2>
  <p align="center">A fim de garantir a melhoria contínua dos serviços de saúde prestados à população, a <a href="https://saude.caruaru.pe.gov.br/">Secretaria Municipal de Saúde de Caruaru</a>, no estado de Pernambuco, desenvolveu um sistema de pesquisa de satisfação e avaliação das unidades de saúde. Esse sistema, criado por Pedro Henrique, visa obter feedbacks dos usuários, identificar pontos fortes e fracos dos serviços oferecidos e direcionar ações para o aprimoramento do atendimento. </p>
 </p>
