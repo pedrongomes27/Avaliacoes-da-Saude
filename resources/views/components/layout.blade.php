@@ -43,6 +43,10 @@
         </div>
     </div>
 
+    <div id="warning-message">
+        <h2>Gire para a horizontal</h2>
+        <img src="{{ asset('assets/img/girar-tablet.png') }}">
+    </div>
 
 </body>
 

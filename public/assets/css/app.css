@@ -10,9 +10,14 @@
     font-family: 'Heebo';
 }
 
-body {
+html {
     background-image: url('./../img/background.png');
     background-size: cover;
+    
+}
+
+body {
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,7 +25,7 @@ body {
     min-height: calc(100vh - 8em);
     margin: 0;
     padding: 4em;
-    
+
 }
 
 .container {
@@ -35,6 +40,7 @@ body {
 
     max-width: 45.5em;
     min-width: 44.5em;
+
 }
 
 .form-title {
@@ -260,10 +266,10 @@ input[type="radio"] {
     padding: 1px 10px;
     padding-top: 7px;
     cursor: pointer;
-    
+
 }
 
-.submit-form{
+.submit-form {
     border: none;
     background-color: #285D34;
     color: #fff;
@@ -355,6 +361,47 @@ button.prev {
     padding: 7px 10px;
     background-color: #FEBA2C;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
 
 
+
+#warning-message {
+    display: none;
+}
+
+@media only screen and (orientation:portrait) {
+    #app {
+        display: none;
+    }
+
+    #warning-message {
+        display: block;
+        align-items: center;
+        justify-content: center;
+
+        margin-top: -8em;
+
+        background-color: #fff;
+        border-radius: 0.5em;
+        text-align: center;
+        padding: 1.25em;
+    }
+
+    #warning-message h2 {
+        font-size: 1.5em;
+        font-weight: bold;
+        color: #285D34;
+        margin-top: 0;
+
+    }
+    #warning-message img {
+        width: 5em;
+
+    }
+}
+
+@media only screen and (orientation:landscape) {
+    #warning-message {
+        display: none;
+    }
 }
