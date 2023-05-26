@@ -25,8 +25,8 @@ body {
 
 .container {
 
-    padding-left: 107px;
-    padding-right: 107px;
+    padding-left: 6.6875em;
+    padding-right: 6.6875em;
 
 
     background: #D9D9D9;
@@ -34,11 +34,12 @@ body {
     border-radius: 20px;
 
     max-width: 45.5em;
+    min-width: 44.5em;
 }
 
 .form-title {
-    margin-top: 50px;
-    margin-bottom: 44px;
+    margin-top: 1em;
+    margin-bottom: 1em;
 
     font-family: 'Heebo';
     font-weight: 700;
@@ -55,13 +56,13 @@ body {
 .form-question {
     font-family: 'Heebo';
     font-weight: 300;
-    font-size: 28px;
-    line-height: 41px;
+    font-size: 1.7em;
+    line-height: 2.5625em;
     display: flex;
     align-items: center;
     text-align: center;
     justify-content: center;
-    margin-bottom: 14px;
+    margin-bottom: 0.875em;
 
     color: #285D34;
 }
@@ -100,8 +101,6 @@ body {
 
 }
 
-/* .has-error */
-
 .form-result {
     margin-top: 10px;
     display: flex;
@@ -127,7 +126,7 @@ body {
 
 .comment,
 .input-search {
-    width: 643px;
+    width: 39em;
     border: 1px solid #ccc;
     border-radius: 4px;
     background: #ededed;
@@ -276,6 +275,7 @@ input[type="radio"] {
 
 .icons {
     margin-top: 38px;
+    margin-bottom: 18px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -297,12 +297,14 @@ input[type="radio"] {
 
 .page {
     display: none;
-
+    transition: opacity 0.5s ease-in-out;
 }
 
-.active {
+.page.active {
     display: block;
+    opacity: 1;
 }
+
 
 .pagination {
     display: grid;
@@ -336,6 +338,7 @@ button.prev {
 .has-error {
     float: left;
     color: red;
+    margin-bottom: -1em;
 
 }
 
