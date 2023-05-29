@@ -39,8 +39,7 @@
 </details>
 
 * * *
-<p>
-    Feito com :heart: e Laravel
-    
-    Obrigado!
-</p>
+
+Feito com :heart: e Laravel
+
+Obrigado!
