@@ -28,13 +28,11 @@
 <details>
     <summary><b>:star: Benefícios para a População</b></summary>
 
-    <p>
-        O sistema de pesquisa de satisfação e avaliação das unidades de saúde de Caruaru traz benefícios significativos
+    <p>O sistema de pesquisa de satisfação e avaliação das unidades de saúde de Caruaru traz benefícios significativos
         para a população. Ao possibilitar que os usuários expressem suas opiniões, ele promove a participação ativa dos
         cidadãos na melhoria dos serviços de saúde. Além disso, as ações corretivas implementadas a partir dos
         resultados das pesquisas visam garantir um atendimento mais eficiente, humanizado e de qualidade, contribuindo
-        para a promoção da saúde e bem-estar da comunidade.
-    </p>
+        para a promoção da saúde e bem-estar da comunidade.</p>
 
 </details>
 
