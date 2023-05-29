@@ -8,15 +8,15 @@
 
 <details>
     <summary><b>:hammer_and_wrench: Coleta de Dados</b></summary>
-    <p>O sistema de pesquisa de satisfação foi projetado para ser acessível e abrangente. Por meio de questionários online disponibilizados aos usuários das unidades de saúde, são coletadas informações relevantes sobre a experiência do paciente. Os questionários englobam aspectos como tempo de espera, qualidade do atendimento médico, disponibilidade de medicamentos, limpeza das instalações, entre outros. Além disso, são fornecidas opções para que os pacientes expressem suas sugestões e críticas construtivas.</p>
+    <br>O sistema de pesquisa de satisfação foi projetado para ser acessível e abrangente. Por meio de questionários online disponibilizados aos usuários das unidades de saúde, são coletadas informações relevantes sobre a experiência do paciente. Os questionários englobam aspectos como tempo de espera, qualidade do atendimento médico, disponibilidade de medicamentos, limpeza das instalações, entre outros. Além disso, são fornecidas opções para que os pacientes expressem suas sugestões e críticas construtivas.</br>
     
 </details>
 
 
 <details>
     <summary><b>:star: Benefícios para a População</b></summary>
-    <p>O sistema de pesquisa de satisfação e avaliação das unidades de saúde de Caruaru traz benefícios significativos para a população. Ao possibilitar que os usuários expressem suas opiniões, ele promove a participação ativa dos cidadãos na melhoria dos serviços de saúde. Além disso, as ações corretivas implementadas a partir dos resultados das pesquisas visam garantir um atendimento mais eficiente, humanizado e de qualidade, contribuindo para a promoção da saúde e bem-estar da comunidade.
-    </p>
+    <br>O sistema de pesquisa de satisfação e avaliação das unidades de saúde de Caruaru traz benefícios significativos para a população. Ao possibilitar que os usuários expressem suas opiniões, ele promove a participação ativa dos cidadãos na melhoria dos serviços de saúde. Além disso, as ações corretivas implementadas a partir dos resultados das pesquisas visam garantir um atendimento mais eficiente, humanizado e de qualidade, contribuindo para a promoção da saúde e bem-estar da comunidade.
+    </br>
     
 </details>
 
