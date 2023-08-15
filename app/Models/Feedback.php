@@ -16,6 +16,7 @@ class Feedback extends Model
         'nota2',
         'nota3',
         'comentario',
+        'contato',
         'log_ip',
         'no_unidade',
 

@@ -45,7 +45,7 @@ body {
 
 .form-title {
     margin-top: 1em;
-    margin-bottom: 1em;
+    /* margin-bottom: 1em; */
 
     font-family: 'Heebo';
     font-weight: 700;
@@ -59,7 +59,7 @@ body {
 }
 
 
-.form-question {
+.form-question, .form-question-contact {
     font-family: 'Heebo';
     font-weight: 300;
     font-size: 1.7em;
@@ -72,6 +72,12 @@ body {
 
     color: #285D34;
 }
+
+.form-question-contact{
+    font-size: 1.2em;
+}
+
+
 
 .form-content {
     display: flex;
@@ -87,7 +93,8 @@ body {
 }
 
 .form-comment,
-.form-search {
+.form-search,
+.contato-field {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -131,7 +138,8 @@ body {
 
 
 .comment,
-.input-search {
+.input-search,
+.contact {
     width: 39em;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -143,6 +151,18 @@ body {
 
 
 }
+
+.form-contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .contact{
+    width: 29em;
+    margin: auto auto;
+} */
 
 input[type="radio"] {
     appearance: none;

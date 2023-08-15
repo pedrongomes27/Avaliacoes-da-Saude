@@ -10,9 +10,6 @@
     <link href="{{ asset('assets/css/app.css') }}" rel="stylesheet" type="text/css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-
-
-
 </head>
 
 <body>
@@ -29,7 +26,6 @@
 
                 <div class="page active" id="page-1">
                     <div class="form-content">
-
                         <label class="form-question" for="pergunta">Como você classificaria a qualidade do nosso
                             atendimento?</label>
 
@@ -54,7 +50,6 @@
                                 <input type="radio" id="opcao5" name="nota1" value="5">
                                 <label for="opcao5" class="opcao5"> EXCELENTE </label>
                             </div>
-
                         </div>
                         <div class="error">
                             <div id="error-message" class="not-error">POR FAVOR, SELECIONE UMA OPÇÃO!</div>
@@ -149,6 +144,13 @@
                         <textarea name="comentario" class="comment" rows="5" style="resize:none"></textarea>
                     </div>
 
+                    <div id="contact-field" class="form-contact" style="display: none;">
+                        <label class="form-question-contact" for="contato">Deixe seu contato para entendermos melhor o que aconteceu (opcional):</label>
+                        <div class="form-contact">
+                            <input type="text" class="contact" name="contato" id="contato">
+                        </div>
+                    </div>
+
                     <div class="pagination">
                         <div class="nav">
                             <button type="button" class="prev">Anterior</button>
@@ -160,7 +162,6 @@
                             class="submit-form">ENVIAR</button>
                     </div>
                 </div>
-
             </div>
         </form>
 
@@ -177,7 +178,6 @@
                 <img src="{{ asset('assets/img/sus.png') }}" alt="">
             </div>
         </div>
-
     </div>
 
     <div id="warning-message">
@@ -185,115 +185,79 @@
         <img src="{{ asset('assets/img/girar-tablet.png') }}">
     </div>
 
-</body>
+    <script>
+        const prevBtns = document.querySelectorAll('.prev');
+        const nextBtns = document.querySelectorAll('.next');
+        let notaValue = false;
 
-</html>
 
-<script>
-    // Seleciona todos os botões "Próximo" e "Anterior"
-    const prevBtns = document.querySelectorAll('.prev');
-    const nextBtns = document.querySelectorAll('.next');
+        nextBtns.forEach((btn) => {
+            btn.addEventListener('click', () => {
+                const currentPage = document.querySelector('.page.active');
+                const radioField = currentPage.querySelector('.form-radio');
+                const message = currentPage.querySelector('#error-message');
 
-    // Adiciona um evento de clique a cada botão "Próximo"
-    nextBtns.forEach((btn) => {
-        btn.addEventListener('click', () => {
-            const currentPage = document.querySelector('.page.active');
-            const radioField = currentPage.querySelector('.form-radio');
-            const message = currentPage.querySelector('#error-message');
+                if (!radioField.querySelector('input:checked')) {
+                    if (message.classList.contains('not-error')) {
+                        message.classList.remove('not-error');
+                        message.classList.add('has-error');
+                    }
+                } else {
+                    if (message.classList.contains('has-error')) {
+                        message.classList.remove('has-error');
+                        message.classList.add('not-error');
+                    }
 
-            if (!radioField.querySelector('input:checked')) {
-                if (message.classList.contains('not-error')) {
-                    message.classList.remove('not-error');
-                    message.classList.add('has-error');
+                    currentPage.classList.remove('active');
+                    const nextPage = currentPage.nextElementSibling;
+                    nextPage.classList.add('active');
+
+                    nextPage.classList.add('animate__animated', 'animate__fadeIn');
+                    nextPage.classList.remove('animate__fadeOut');
+
+                    setTimeout(() => {
+                        currentPage.classList.add('animate__animated', 'animate__fadeOut');
+                    }, 100);
+
+                    if (radioField.querySelector('input:checked').value === "1" || radioField.querySelector(
+                            'input:checked').value === "2") {
+                        notaValue = true;
+                    }
+                    // Verifica se chegou ao final da pesquisa
+                    if (!nextPage.nextElementSibling && notaValue) {
+                        document.getElementById('contact-field').style.display = "block";
+                    } else {
+                        document.getElementById('contact-field').style.display = "none";
+                    }
+
                 }
-            } else {
-                if (message.classList.contains('has-error')) {
-                    message.classList.remove('has-error');
-                    message.classList.add('not-error');
-                }
+            });
+        });
 
+        prevBtns.forEach((btn) => {
+            btn.addEventListener('click', () => {
+                const currentPage = document.querySelector('.page.active');
                 currentPage.classList.remove('active');
-                const nextPage = currentPage.nextElementSibling;
-                nextPage.classList.add('active');
+                const prevPage = currentPage.previousElementSibling;
+                prevPage.classList.add('active');
 
-                // Adiciona animação de entrada à próxima página
-                nextPage.classList.add('animate__animated', 'animate__fadeIn');
-                // Remove animação de saída da próxima página (se existir)
-                nextPage.classList.remove('animate__fadeOut');
+                prevPage.classList.add('animate__animated', 'animate__fadeIn');
+                prevPage.classList.remove('animate__fadeOut');
 
-                // Adiciona animação de saída à página atual com atraso
                 setTimeout(() => {
                     currentPage.classList.add('animate__animated', 'animate__fadeOut');
                 }, 100);
-            }
+
+
+            });
+
         });
-    });
-    
-    prevBtns.forEach((btn) => {
-        btn.addEventListener('click', () => {
-            const currentPage = document.querySelector('.page.active');
-            currentPage.classList.remove('active');
-            const prevPage = currentPage.previousElementSibling;
-            prevPage.classList.add('active');
-            
-            // Adiciona animação de entrada à página anterior
-            prevPage.classList.add('animate__animated', 'animate__fadeIn');
-            // Remove animação de saída da página anterior (se existir)
-            prevPage.classList.remove('animate__fadeOut');
-            
-            // Adiciona animação de saída à página atual com atraso
-            setTimeout(() => {
-                currentPage.classList.add('animate__animated', 'animate__fadeOut');
-            }, 100);
-        });
-    });
-    
-    // nextBtns.forEach((btn) => {
-    //     btn.addEventListener('click', () => {
-    //         const currentPage = document.querySelector('.page.active');
-    //         const radioField = currentPage.querySelector('.form-radio');
-    //         const message = currentPage.querySelector('#error-message');
 
-    //         // Verifica se alguma opção está selecionada
-    //         if (!radioField.querySelector('input:checked')) {
-    //             // Se nenhuma opção estiver selecionada, adiciona a mensagem de erro
-    //             if (message.classList.contains('not-error')) {
-    //                 message.classList.remove('not-error');
-    //                 message.classList.add('has-error');
-    //             }
-    //         } else {
-    //             // Se alguma opção estiver selecionada, remove a mensagem de erro (se existir)
-    //             if (message.classList.contains('has-error')) {
-    //                 message.classList.remove('has-error');
-    //                 message.classList.add('not-error');
-    //             }
-    //             // Remove a classe "active" da página atual
-    //             currentPage.classList.remove('active');
-    //             // Encontra a próxima página
-    //             const nextPage = currentPage.nextElementSibling;
-    //             // Adiciona a classe "active" à próxima página
-    //             nextPage.classList.add('active');
+        function disableButton() {
+            var button = document.getElementById("submitButton");
+            button.style.display = "none";
+        }
+    </script>
+</body>
 
-    //         }
-    //     });
-    // });
-
-    // // Adiciona um evento de clique a cada botão "Anterior"
-    // prevBtns.forEach((btn) => {
-    //     btn.addEventListener('click', () => {
-    //         // Encontra a página atual
-    //         const currentPage = document.querySelector('.page.active');
-    //         // Remove a classe "active" da página atual
-    //         currentPage.classList.remove('active');
-    //         // Encontra a página anterior
-    //         const prevPage = currentPage.previousElementSibling;
-    //         // Adiciona a classe "active" à página anterior
-    //         prevPage.classList.add('active');
-    //     });
-    // });
-    
-    function disableButton() {
-        var button = document.getElementById("submitButton");
-        button.style.display = "none";
-    }
-</script>
+</html>

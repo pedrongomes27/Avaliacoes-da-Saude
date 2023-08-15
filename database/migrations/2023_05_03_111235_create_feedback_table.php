@@ -17,6 +17,7 @@ return new class extends Migration
             $table->integer('nota2');
             $table->integer('nota3');
             $table->string('comentario')->nullable();
+            $table->string('contato')->nullable();
             $table->string('no_unidade');
             $table->string('log_ip');
             $table->timestamps();
